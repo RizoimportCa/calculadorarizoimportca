@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Rizo Import</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="header">
+            <h1>Calculadora Rizo Import</h1>
+            <h2>Tu Socio En Importaciones</h2>
+        </div>
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="box">
+            <h3>Envío Aéreo</h3>
+            <label for="lengthAir">Largo (cm):</label>
+            <input type="number" id="lengthAir" placeholder="Largo en cm">
+
+            <label for="widthAir">Ancho (cm):</label>
+            <input type="number" id="widthAir" placeholder="Ancho en cm">
+
+            <label for="heightAir">Alto (cm):</label>
+            <input type="number" id="heightAir" placeholder="Alto en cm">
+
+            <label for="weightAir">Peso (kg):</label>
+            <input type="number" id="weightAir" placeholder="Peso en kg">
+
+            <button onclick="calculateShippingAir()">Calcular Costo de Envío Aéreo</button>
+            <div class="price-box">
+                <h3>Precio Final Envío Aéreo</h3>
+                <div class="result" id="finalPriceAir"></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Envío Marítimo</h3>
+            <label for="lengthSea">Largo (cm):</label>
+            <input type="number" id="lengthSea" placeholder="Largo en cm">
+
+            <label for="widthSea">Ancho (cm):</label>
+            <input type="number" id="widthSea" placeholder="Ancho en cm">
+
+            <label for="heightSea">Alto (cm):</label>
+            <input type="number" id="heightSea" placeholder="Alto en cm">
+
+            <select id="destination">
+                <option value="770">Valencia ($800)</option>
+                <option value="800">Maracay ($900)</option>
+                <option value="830">Caracas ($920)</option>
+                <option value="940">Barquisimeto ($950)</option>
+                <option value="1050">Mérida y resto del país ($950)</option>
+                <option value="750">Mérida importación grupal ($750)</option>
+            </select>
+
+            <button onclick="calculateShippingSea()">Calcular Costo de Envío Marítimo</button>
+            <div class="price-box">
+                <h3>Precio Final Envío Marítimo</h3>
+                <div class="result" id="finalPriceSea"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
